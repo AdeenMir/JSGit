@@ -84,3 +84,11 @@ document.getElementById('new-book-form').addEventListener('submit',e=>{
 document.getElementById('new-book-btn').addEventListener('click',()=>{
   document.getElementById('book-dialog').showModal();
 });
+
+// Add two default books
+myLibrary.push(
+  new Book('1984','George Orwell',328,true),
+  new Book('The Hobbit','J.R.R. Tolkien',310,false)
+);
+
+displayBooks();
