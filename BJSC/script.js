@@ -83,21 +83,97 @@ that spans multiple lines*/
 // console.log(y, typeof y);
 // console.log(z, typeof z);
 
-const pi=3.14159;
-let radius;
-let circumference;
+//const pi=3.14159;
+//let radius;
+//let circumference;
+//
+//radius = window.prompt("Enter the radius of the circle:");
+//radius = Number(radius);
+//
+//circumference = 2 * pi * radius;
+//
+//console.log(circumference);
+//
+//document.getElementById("mysubmit").onclick = function (){
+//    document.getElementById("mytext").value;
+//    radius=Number(radius);
+//    circumference = 2 * pi * radius;
+//    document.getElementById("myh3").textContent = circumference +"cm";
+//    
+//}
 
-radius = window.prompt("Enter the radius of the circle:");
-radius = Number(radius);
+// let x=3;
+// let y=2;
+// let z=1;
+//z=Math.round(x);
+//z=Math.floor(x);
+//z=Math.ceil(x);
+//z=Math.trunc(x);  // removes decimal part
+//z=Math.pow(x, y);     // x raised to the power of y
+//z=Math.log(x);  // natural logarithm of x
+//z=math.abs(x);  // absolute value of x(positive numbers only)
+//z=math.sign(x);  // sign of x (-1 for negative, 0 for zero, 1 for positive)
+//z=Math.sqrt(x);  // square root of x
+//.min
+//.max
+// let max =math.max(x, y, z);  // maximum value among x, y, z
+// console.log(max);
 
-circumference = 2 * pi * radius;
+//let randomNumber = Math.floor(Math.random()*6); // generates a random number between 0 and 1
+//console.log(randomNumber);
 
-console.log(circumference);
+//count min=50;
 
-document.getElementById("mysubmit").onclick = function (){
-    document.getElementById("mytext").value;
-    radius=Number(radius);
-    circumference = 2 * pi * radius;
-    document.getElementById("myh3").textContent = circumference +"cm";
+// const btn = document.getElementById("btn");
+// const mylabel1 = document.getElementById("mylabel1");
+// const mylabel2 = document.getElementById("mylabel2");
+// const mylabel3 = document.getElementById("mylabel3");
+// const min= 1;
+// const max=6;
+// let randomNumber1;
+// let randomNumber2;
+// let randomNumber3;
+
+// btn.onclick = function() {
+//     randomNumber1=Math.floor(Math.random()*max)+min;
+//     randomNumber2=Math.floor(Math.random()*max)+min;
+//     randomNumber3=Math.floor(Math.random()*max)+min;
+//     mylabel1.textContent=randomNumber1;
+//     mylabel2.textContent=randomNumber2;
+//     mylabel3.textContent=randomNumber3;
+//}
+
+const mytext=document.getElementById("mytext");
+const mysubmit=document.getElementById("mysubmit");
+const result=document.getElementById("result");
+let age;
+
+mysubmit.onclick = function() {
+    age=mytext.value
+    age=Number(age);
+    if(age >=100){
+        result.textContent = "You are a centenarian!";
+
+    }
+    else if(age>18){
+        result.textContent = "You are an adult.";
+    }
+    else if(age==0){
+        result.textContent = "You are a newborn.";
+    }
+    
+    else if(age<0){
+
+        result.textContent = "Age cannot be negative.";
+    }
+    else if(age<18){
+        result.textContent = "You are a minor.";
+    }
+    else if(age==0){
+        result.textContent = "You are a newborn.";
+    }
+    else{
+        result.textContent = "Invalid age.";
+    }
     
 }
