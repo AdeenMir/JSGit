@@ -143,37 +143,39 @@ that spans multiple lines*/
 //     mylabel3.textContent=randomNumber3;
 //}
 
-const mytext=document.getElementById("mytext");
-const mysubmit=document.getElementById("mysubmit");
-const result=document.getElementById("result");
-let age;
+// const mytext=document.getElementById("mytext");
+// const mysubmit=document.getElementById("mysubmit");
+// const result=document.getElementById("result");
+// let age;
 
-mysubmit.onclick = function() {
-    age=mytext.value
-    age=Number(age);
-    if(age >=100){
-        result.textContent = "You are a centenarian!";
+// mysubmit.onclick = function() {
+//     age=mytext.value
+//     age=Number(age);
+//     if(age >=100){
+//         result.textContent = "You are a centenarian!";
 
-    }
-    else if(age>18){
-        result.textContent = "You are an adult.";
-    }
-    else if(age==0){
-        result.textContent = "You are a newborn.";
-    }
+//     }
+//     else if(age>18){
+//         result.textContent = "You are an adult.";
+//     }
+//     else if(age==0){
+//         result.textContent = "You are a newborn.";
+//     }
     
-    else if(age<0){
+//     else if(age<0){
 
-        result.textContent = "Age cannot be negative.";
-    }
-    else if(age<18){
-        result.textContent = "You are a minor.";
-    }
-    else if(age==0){
-        result.textContent = "You are a newborn.";
-    }
-    else{
-        result.textContent = "Invalid age.";
-    }
+//         result.textContent = "Age cannot be negative.";
+//     }
+//     else if(age<18){
+//         result.textContent = "You are a minor.";
+//     }
+//     else if(age==0){
+//         result.textContent = "You are a newborn.";
+//     }
+//     else{
+//         result.textContent = "Invalid age.";
+//     }
     
-}
+// }
+
+
