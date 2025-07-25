@@ -1,0 +1,89 @@
+body {
+    background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    background: rgba(255,255,255,0.85);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    margin: 40px auto;
+    padding: 32px 24px;
+    max-width: 500px;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 12px 28px;
+    border-radius: 16px;
+    border: none;
+    background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(108, 108, 233, 0.15);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: #222;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(67, 233, 123, 0.18);
+}
+
+button:active {
+    background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+    color: #333;
+    transform: scale(0.98);
+}
+
+input {
+    font-size: 2rem;
+    width: 160px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #6a82fb;
+    margin: 12px 0;
+    padding: 8px 0;
+    background: #f7faff;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(67, 233, 123, 0.08);
+    transition: border 0.2s;
+}
+
+input:focus {
+    border: 2px solid #fc5c7d;
+    outline: none;
+}
+
+#diceresult {
+    margin: 12px 0;
+    font-size: 2.2rem;
+    color: #fc5c7d;
+    text-shadow: 1px 2px 8px #fff7;
+    letter-spacing: 2px;
+}
+
+#diceimages img {
+    width: 120px;
+    margin: 8px;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(108, 108, 233, 0.12);
+    border: 3px solid #43e97b;
+    background: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#diceimages img:hover {
+    transform: scale(1.08) rotate(-4deg);
+    box-shadow: 0 8px 32px rgba(252, 92, 125, 0.18);
+}
