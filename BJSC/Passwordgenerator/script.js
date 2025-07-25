@@ -1,38 +1,40 @@
+function generatePassword(length, includelowercase, includenumbers, includeuppercase, includesymbols) {
+    const lowercasechars = "abcdefghijklmnopqrstuvwxyz";
+    const uppercasechars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numberchars = "0123456789";
+    const symbolchars = "!@#$%^&*-+";
 
-function generatePassword(length,includelowercase,includenumbers,includeuppercase,includesymbols) {
-    
-        const lowercasechars="abcdefghijklmnopqrstuvwxyz";
-        const uppercasechars="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        const numberchars="0123456789";
-        const symbolchars="!@#$%^&*-+";
+    let allowedchars = "";
+    let password = "";
 
-        let allowedchars="";
-        let password="";
+    allowedchars += includelowercase ? lowercasechars : "";
+    allowedchars += includeuppercase ? uppercasechars : "";
+    allowedchars += includenumbers ? numberchars : "";
+    allowedchars += includesymbols ? symbolchars : "";
 
-        allowedchars+=includelowercase ? lowercasechars:"";
-        allowedchars+=includeuppercase ? uppercasechars:"";
-        allowedchars+=includenumbers ? numberchars:"";
-        allowedchars+=includesymbols ? symbolchars:"";
+    if (length <= 0) {
+        return "Password length must be at least one.";
+    }
 
-        if(length<=0){
-            return `(password length must be atleast one)`
-        }
-        if(allowedchars.length===0){
-            return `(at least one set of characters needs tobe selected)`;
-        }
+    if (allowedchars.length === 0) {
+        return "At least one character type must be selected.";
+    }
 
-        for(let i=0;i<length;i++){
-            const randomindex=Math.floor(Math.random()*allowedchars.length)
-            password+=allowedchars[randomindex]
-        }
-        return password;
+    for (let i = 0; i < length; i++) {
+        const randomindex = Math.floor(Math.random() * allowedchars.length);
+        password += allowedchars[randomindex];
+    }
+
+    return password;
 }
 
-const passwordlength=10;
-const includelowercase=false;
-const includeuppercase=false;
-const includesymbols=false;
-const includenumbers=false;
+function handleGenerate() {
+    const length = parseInt(document.getElementById("length").value);
+    const includeLower = document.getElementById("lowercase").checked;
+    const includeUpper = document.getElementById("uppercase").checked;
+    const includeNums = document.getElementById("numbers").checked;
+    const includeSyms = document.getElementById("symbols").checked;
 
-const password=generatePassword(passwordlength,includelowercase,includenumbers,includeuppercase,includesymbols) 
-console.log(`generate password: ${password}`);
+    const password = generatePassword(length, includeLower, includeNums, includeUpper, includeSyms);
+    document.getElementById("output").textContent = password;
+}

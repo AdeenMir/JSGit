@@ -1,36 +1,44 @@
 const minimum = 1;
 const maximum = 100;
-const answr =Math.floor(Math.random()* (maximum - minimum) + minimum);
-
-console.log("The answer is: " + answr);
+const answer = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 let attempts = 0;
-let guess;
-let running = true;
+let gameOver = false;
 
-while (running) {
-    guess=window.prompt("Guess a number between " + minimum + " and " + maximum + ":");
-    guess =Number(guess);
+function checkGuess() {
+    if (gameOver) return;
 
-    if( isNaN(guess)) {
-        window.alert("Please enter a valid number.");
-        continue;
+    const input = document.getElementById("guessInput");
+    const guess = Number(input.value);
+    const message = document.getElementById("message");
+    const attemptsDisplay = document.getElementById("attempts");
+
+    if (isNaN(guess)) {
+        message.textContent = "❌ Please enter a valid number.";
+        message.style.color = "red";
+        return;
     }
+
     if (guess < minimum || guess > maximum) {
-        window.alert("Please enter a number within the range of " + minimum + " to " + maximum + ".");
+        message.textContent = `⚠️ Enter a number between ${minimum} and ${maximum}.`;
+        message.style.color = "orange";
+        return;
     }
-    else{
-            attempts++;
-            if (guess < answr) {
-                window.alert("Too low! Try again.");
-            }
-            else if (guess > answr) {
-                window.alert("Too high! Try again.");
-            }
-            else {
-                window.alert("Congratulations! You've guessed the number " + answr + " in " + attempts + " attempts.");
-                running = false;
-            }
+
+    attempts++;
+
+    if (guess < answer) {
+        message.textContent = "📉 Too low! Try again.";
+        message.style.color = "blue";
+    } else if (guess > answer) {
+        message.textContent = "📈 Too high! Try again.";
+        message.style.color = "blue";
+    } else {
+        message.textContent = `🎉 Correct! You guessed it in ${attempts} attempts.`;
+        message.style.color = "green";
+        gameOver = true;
     }
-    
+
+    attemptsDisplay.textContent = `Attempts: ${attempts}`;
+    input.value = "";
 }
