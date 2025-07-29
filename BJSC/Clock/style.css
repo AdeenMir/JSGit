@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    background-image: url(bg1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+#clockcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: none;
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(2px);
+}
+
+#clock{
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    font-size: 7rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(80,78,78,0.92) 60%, rgba(67,233,123,0.55) 100%);
+    border-radius: 32px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    padding: 48px 64px;
+    width: auto;
+    border: 3px solid #43e97b;
+    letter-spacing: 0.15em;
+    text-shadow: 0 4px 24px #43e97b88, 0 1px 0 #000;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+#clock:hover {
+    box-shadow: 0 16px 48px 0 #fc5c7d55, 0 8px 32px 0 #43e97b55;
+    transform: scale(1.03)
+}

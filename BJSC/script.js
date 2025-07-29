@@ -179,3 +179,100 @@ that spans multiple lines*/
 // }
 
 
+// const person{
+//     firstname: "Adeen",
+//     latname: "Mir",
+//     age: 22,
+//     isStudent: true,
+// }
+// console
+
+// 
+// class product {
+//     constructor(name, price, quantity) {
+//         this.name = name;
+//         this.price = price;
+//         this.quantity = quantity;
+//     }
+
+//     displayProduct(){
+//         console.log(`Product : ${this.name}`);
+//         console.log(`Price : $${this.price}`);
+//     }
+
+//     calculateTotalPrice(tax) {
+//         return this.price+(this.price*tax)
+//     }
+// }
+// const tax = 0.05; // 5% tax
+
+// const product1 = new product("Laptop", 1200, 5);
+// const product2 = new product("Smartphone", 800, 10);
+// const product3 = new product("Tablet", 400, 15);
+
+// product2.displayProduct();
+// const totalPrice = product1.calculateTotalPrice(tax);
+// console.log(`Total price after tax: $${totalPrice.toFixed(2)}`);
+
+// class Animal{
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age
+//     }
+// }
+// class Rabbit extends Animal{
+//     constructor(name,age,runspeed){
+//         super(name,age);
+//         this.runspeed = runspeed;
+//     }
+// }
+// class fish extends Animal{
+//     constructor(name,age,swimspeed){
+//        super(name,age);
+//         this.swimspeedpeed = swimspeed;
+//     }
+// }
+// class hawk extends Animal{
+//     constructor(name,age,flightspeed){
+//        super(name,age);
+//         this.flightspeedspeed = flightspeed;
+//     }
+// }
+// const rabbit1 = new Rabbit("Bunny", 2, 30);
+// const fish1 = new fish("Goldy", 1, 10);
+// const hawk2 = new hawk("Sky", 3, 50);
+
+// console.log(hawk2.name);
+// console.log(rabbit1.runspeed);
+// console.log(rabbit1.name);
+// console.log(rabbit1.age);
+
+// class Person {
+//     constructor(name, age, ...address) {
+//         this.name = name;
+//         this.age = age;
+//         this.address= new Address(...address);
+//     }
+    
+
+// }
+// class Address {
+//     constructor(street, city, country) {
+//         this.street = street;
+//         this.city = city;
+//         this.country = country;
+//     }
+// }
+// const person1 = new Person("Adeen", 22, "123 Main St", "New York", "USA");
+// console.log(person1.address.street);
+
+const cards=[`A`,2,3,4,5,6,7,8,9,10,`J`,`Q`,`K`];
+shuffle(cards);
+
+console.log(cards);
+function shuffle(array){
+    for(let i=array.length-1;i>0;i--){
+        const random=Math.floor(Math.random()*(i+1));
+    [array[i],array[random]]= [array[random],array[i]];
+    }
+}
