@@ -1,38 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8">
+  <title>Move the Box</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #f0f0f0;
+    }
+
+    #box {
+      width: 50px;
+      height: 50px;
+      background-color: steelblue;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+    }
+  </style>
 </head>
 <body>
-    <!-- <p id="p1"></p>
-    <p id="p2"></p>
-    <p id="p3"></p>
 
-    <h1 id="myH1">Enter the radius of circle</h1>
-    <label for="">Radius:</label>
-    <input id="mytext"><br><br>
-    <button id="mysubmit">Submit</button>
-    <h3 id="myh3"></h3> -->
+  <div id="box"></div>
 
-
-    <!-- <button id="btn">Roll</button><br>
-    <label id="mylabel1" class="mylabels"></label><br>
-    <label id="mylabel2" class="mylabels"></label><br>
-    <label id="mylabel3" class="mylabels"></label><br>-->
-
-    <!-- <label id="mylabel">Enter your age</label><br>
-    <input type="text" id="mytext"><br><br>
-    <button id="mysubmit">Submit</button>
-    <p id="result"></p> -->
-
-    <input type="checkbox" id="mycheckbox">
-    <label for="mycheckbox">Check me</label><br>
-    <input type="radio" name="myradio" id="myradio1">VISA;
-    
-    <script src="script.js"></script> 
-
+  <script src="script.js"></script>
 </body>
 </html>

@@ -277,3 +277,33 @@ that spans multiple lines*/
 //     }
 // }
 
+// const box = document.getElementById("box");
+
+// // Initial position
+// let posX = 100;
+// let posY = 100;
+// const step = 10;
+
+// document.addEventListener("keydown", (e) => {
+//   switch (e.key) {
+//     case "ArrowUp":
+//       posY -= step;
+//       break;
+//     case "ArrowDown":
+//       posY += step;
+//       break;
+//     case "ArrowLeft":
+//       posX -= step;
+//       break;
+//     case "ArrowRight":
+//       posX += step;
+//       break;
+//     default:
+//       return; // ignore other keys
+//   }
+
+
+//   // Apply the new position
+//   box.style.left = `${posX}px`;
+//   box.style.top = `${posY}px`;
+// });
