@@ -1,0 +1,132 @@
+body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  background: radial-gradient(circle at 60% 40%, #f7d51d 0%, #ff5959 100%);
+  color: #2a2a2a;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 24px 20px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(255, 89, 89, 0.10);
+}
+
+h1 {
+  color: #ef1c1c;
+  font-family: 'Luckiest Guy', 'Montserrat', cursive, sans-serif;
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 #ffe066, 0 4px 12px #ef1c1c44;
+  margin-bottom: 18px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.search-box input {
+  padding: 12px;
+  font-size: 1.1rem;
+  width: 70%;
+  border-radius: 8px;
+  border: 2px solid #ef1c1c;
+  background: #fffbe7;
+  color: #2a2a2a;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.search-box input:focus {
+  border: 2px solid #f7d51d;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, #f7d51d 60%, #ef1c1c 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #2a2a2a;
+  font-weight: bold;
+  box-shadow: 0 2px 8px #ef1c1c22;
+  transition: background 0.2s, color 0.2s;
+}
+
+.search-box button:hover {
+  background: linear-gradient(90deg, #ef1c1c 60%, #f7d51d 100%);
+  color: #fff;
+}
+
+.pokemon-card {
+  background: linear-gradient(120deg, #fffbe7 60%, #ffe066 100%);
+  padding: 28px 18px 18px 18px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(239, 28, 28, 0.10);
+  margin-top: 16px;
+  border: 3px solid #ef1c1c;
+  position: relative;
+}
+
+.pokemon-card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 54px;
+  height: 54px;
+  background: radial-gradient(circle at 60% 40%, #f7d51d 60%, #ef1c1c 100%);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px #ef1c1c33;
+  z-index: 1;
+}
+
+.pokemon-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  filter: drop-shadow(0 4px 16px #ef1c1c33);
+  background: #fff;
+  border-radius: 50%;
+  border: 3px solid #f7d51d;
+  padding: 8px;
+}
+
+.stats {
+  margin-top: 18px;
+}
+
+.stats ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.stats li {
+  margin: 6px 0;
+  background: linear-gradient(90deg, #ffe066 60%, #fffbe7 100%);
+  padding: 8px 0;
+  border-radius: 8px;
+  color: #2a2a2a;
+  font-weight: 600;
+  box-shadow: 0 1px 4px #ef1c1c11;
+}
+
+.message {
+  color: #ef1c1c;
+  margin-top: 14px;
+  font-weight: bold;
+  text-shadow:

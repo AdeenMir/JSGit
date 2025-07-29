@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokémon Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Pokémon Viewer</h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Enter name or ID (e.g., pikachu, 25)" />
+      <button id="searchBtn">Search</button>
+    </div>
+    <div class="pokemon-card">
+      <img id="pokeImg" src="" alt="Pokémon Image" />
+      <h2 id="pokeName">Name</h2>
+      <p id="pokeId">#000</p>
+      <p><strong>Type:</strong> <span id="pokeTypes">---</span></p>
+      <p><strong>Height:</strong> <span id="pokeHeight">---</span></p>
+      <p><strong>Weight:</strong> <span id="pokeWeight">---</span></p>
+      <div class="stats">
+        <h3>Base Stats</h3>
+        <ul id="pokeStats"></ul>
+      </div>
+    </div>
+    <p id="message" class="message"></p>
+  </div>
+</body>
+</html>
