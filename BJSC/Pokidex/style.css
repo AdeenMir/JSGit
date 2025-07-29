@@ -129,4 +129,5 @@ h1 {
   color: #ef1c1c;
   margin-top: 14px;
   font-weight: bold;
-  text-shadow:
+  text-shadow:0 1px 0 #fff;
+}
