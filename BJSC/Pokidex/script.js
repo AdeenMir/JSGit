@@ -62,3 +62,16 @@ searchBtn.addEventListener('click', () => {
   const query = input.value.trim();
   if (query) fetchPokemon(query);
 });
+
+searchBtn.addEventListener('click', () => {
+  const query = input.value.trim();
+  if (query) fetchPokemon(query);
+});
+
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    const query = input.value.trim();
+    if (query) fetchPokemon(query);
+  }
+});
+
