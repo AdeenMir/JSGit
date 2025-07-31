@@ -12,10 +12,13 @@ const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card">
       <img
-        src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-        alt={title}
-        className="w-full h-[300px] object-cover rounded"
-      />
+  src={poster_path 
+    ? `https://image.tmdb.org/t/p/w500${poster_path}` 
+    : './No-Movie.png'}
+  alt={title}
+  className="w-full h-[300px] object-cover rounded"
+/>
+
      <div className='mt-4'>
         <h3>{title}</h3>
         <div className='content'>
